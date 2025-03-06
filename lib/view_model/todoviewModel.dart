@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/localstorage/local_storage.dart';
 
 class Todoviewmodel extends ChangeNotifier{
-  String name = "Admin";
-  String password= "1234!";
+  String name = "ragul@steam-a.com";
+  String password= "Admin@123";
 
 List <Map<String,dynamic>> todolist = [];
 

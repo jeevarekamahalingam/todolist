@@ -41,7 +41,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
       final LocalStorage storage = LocalStorage();
-
+bool passwordVisible=true;
   void checkStatus()async{
       bool val=await storage.getIsLoggedin();
       if (val==true) {
@@ -94,7 +94,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   // controller: emailController,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
-                    hintText: 'Enter a email',
+
+                    labelText: "Email",
+                    filled: true
                   ),
                   controller: emailController,
                 ),
@@ -102,10 +104,28 @@ class _MyHomePageState extends State<MyHomePage> {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
                 child: TextField(
+                  obscureText: passwordVisible, 
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
-                    hintText: 'Enter your password',
+
+                    labelText: "Password",
+                   suffixIcon: IconButton(
+                     icon: Icon(passwordVisible
+                         ? Icons.visibility
+                         : Icons.visibility_off),
+                     onPressed: () {
+                       setState(
+                         () {
+                           passwordVisible = !passwordVisible;
+                         },
+                       );
+                     },
+                   ),
+                    alignLabelWithHint: false,
+                   filled: true,
                   ),
+                 keyboardType: TextInputType.visiblePassword, 
+                  textInputAction: TextInputAction.done, 
                   controller: passwordController,
                 ),
               ),
