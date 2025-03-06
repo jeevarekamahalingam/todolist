@@ -19,7 +19,7 @@ samples, guidance on mobile development, and a full API reference.
 
 Login page
 
-![image](https://github.com/user-attachments/assets/e56dbf18-08fd-4a0f-8f3c-0d32b7595c82)
+![image](https://github.com/user-attachments/assets/9a525557-e28c-4edb-ab6b-816666ce339c)
 
 Add task
 
